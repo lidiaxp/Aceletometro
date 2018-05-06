@@ -218,6 +218,10 @@ void loop(){
     digitalWrite(ce3, HIGH);
     delay(500);
   }
+  
+  for(int i = 3; i < 12; i++){
+    digitalWrite(i, LOW);
+  }
 }
 
 void GetMpuValue(const int MPU, int valor){
