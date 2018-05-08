@@ -19,6 +19,9 @@ int res1;
 int menor = 10;
 int maior = 50;
 
+int p = 500;
+int g = 1000;
+
 void setup(){
   Serial.begin(9600);
   Wire.begin();
@@ -84,7 +87,7 @@ void loop(){
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(750);
+    delay(p + p/2);
     for(int i = 2; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -113,7 +116,7 @@ void checagem(){
   if(modulo(res-(x+y+z)) >= menor && modulo(res-(x+y+z)) <= maior && modulo(res1-(x1+y1+z1)) <= menor){
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(2, 5), HIGH);
-    delay(1000);
+    delay(g);
     for(int i = 2; i < 6; i++){
       digitalWrite(i, LOW);
     }
@@ -123,7 +126,7 @@ void checagem(){
   if(modulo(res-(x+y+z)) >= maior && modulo(res1-(x1+y1+z1)) <= menor){
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(2, 5), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 2; i < 6; i++){
       digitalWrite(i, LOW);
     }
@@ -133,7 +136,7 @@ void checagem(){
   if(modulo(res1-(x1+y1+z1)) >= menor && modulo(res1-(x1+y1+z1)) <= maior && modulo(res-(x+y+z)) <= menor){
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(1000);
+    delay(g);
     for(int i = 6; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -143,7 +146,7 @@ void checagem(){
   if(modulo(res1-(x1+y1+z1)) >= maior && modulo(res-(x+y+z)) <= menor){
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 6; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -155,7 +158,7 @@ void checagem(){
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(1000);
+    delay(g);
     for(int i = 2; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -167,7 +170,7 @@ void checagem(){
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 2; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -179,13 +182,13 @@ void checagem(){
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 6; i < 10; i++){
       digitalWrite(i, LOW);
     }
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(6, 9), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 2; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -197,13 +200,13 @@ void checagem(){
     digitalWrite(random(6, 9), HIGH);
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(2, 5), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 2; i < 6; i++){
       digitalWrite(i, LOW);
     }
     digitalWrite(random(2, 5), HIGH);
     digitalWrite(random(2, 5), HIGH);
-    delay(500);
+    delay(p);
     for(int i = 2; i < 10; i++){
       digitalWrite(i, LOW);
     }
@@ -216,5 +219,5 @@ void checagem(){
 
 void repetir(){
   checagem();
-  delay(1000);
+  //delay(g);
 }
