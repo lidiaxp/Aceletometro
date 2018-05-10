@@ -1,5 +1,5 @@
-String oi;
-String last;
+char oi;
+char last;
 
 void setup() {
   Serial.begin(9600);
